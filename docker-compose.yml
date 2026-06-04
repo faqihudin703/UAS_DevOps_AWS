@@ -9,7 +9,7 @@ services:
       MARIADB_PASSWORD: usrcompro_2388010020
     volumes:
       - db_data:/var/lib/mysql
-      - ./db_data/dbcompro_2388010020.sql:/docker-entrypoint-initdb.d/dbcompro_2388010020.sql:ro
+      - ./web-dinamis/db_data/dbcompro_2388010020.sql:/docker-entrypoint-initdb.d/dbcompro_2388010020.sql:ro
     restart: always
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
@@ -38,6 +38,7 @@ services:
       DB_PASSWORD: usrcompro_2388010020
       DB_NAME: dbcompro_2388010020
       DB_HOST: db-webdinamis
+      AUTH_TRUST_HOST=true
       NEXTAUTH_SECRET: adm-serv-web-bebas-saja-32-karakter
       NEXTAUTH_URL: http://13.239.35.21:3000
     depends_on:
