@@ -38,7 +38,7 @@ services:
       DB_PASSWORD: usrcompro_2388010020
       DB_NAME: dbcompro_2388010020
       DB_HOST: db-webdinamis
-      AUTH_TRUST_HOST:true
+      AUTH_TRUST_HOST: "true"
       NEXTAUTH_SECRET: adm-serv-web-bebas-saja-32-kerakter
       NEXTAUTH_URL: http://13.239.35.21:3000
     depends_on:
