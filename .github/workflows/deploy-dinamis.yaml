@@ -44,6 +44,8 @@ jobs:
           username: ${{ secrets.AWS_USERNAME }}
           key: ${{ secrets.AWS_PRIVATE_KEY }}
           script: |
+            sudo chown -R ubuntu:ubuntu /home/ubuntu/docker-aws/db_data/
+            chmod 644 /home/ubuntu/docker-aws/db_data/dbcompro_2388010020.sql
             cd /home/ubuntu/docker-aws
             docker compose pull container-dinamis
             docker compose up -d container-dinamis
