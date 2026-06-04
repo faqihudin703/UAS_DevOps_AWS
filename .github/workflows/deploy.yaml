@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "web-statis/**"
+      - "docker-compose.yml"
 
 jobs:
   deploy:
@@ -26,6 +27,15 @@ jobs:
           context: ./web-statis
           push: true
           tags: faqih703/uas_statis:latest
+      
+      - name: Copy docker-compose ke EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.AWS_USERNAME }}
+          key: ${{ secrets.AWS_PRIVATE_KEY }}
+          source: "docker-compose.yml"
+          target: "/home/ubuntu/docker-aws/"
 
       - name: Deploy ke AWS EC2
         uses: appleboy/ssh-action@v1.0.3
