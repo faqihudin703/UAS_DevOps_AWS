@@ -34,7 +34,7 @@ jobs:
           host: ${{ secrets.AWS_HOST }}
           username: ${{ secrets.AWS_USERNAME }}
           key: ${{ secrets.AWS_PRIVATE_KEY }}
-          source: "docker-compose.yml, /db_data/dbcompro_2388010020.sql"
+          source: "docker-compose.yml,db_data/dbcompro_2388010020.sql"
           target: "/home/ubuntu/docker-aws/"
 
       - name: Deploy ke AWS EC2
