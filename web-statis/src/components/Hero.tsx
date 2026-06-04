@@ -34,7 +34,7 @@ export default function Hero() {
 
           <p className="text-muted text-[0.95rem] leading-[1.85] max-w-[460px] mb-10">
             Semester 6 student shipping production blockchain infrastructure from a homelab in Cirebon.
-            7 live products under Santara Labs — oracles, DeFi protocols, a Solana<->0G bridge, and an NPM SDK.
+            7 live products under Santara Labs — oracles, DeFi protocols, a Solana & 0G bridge, and an NPM SDK.
             Active LP on Meteora DLMM. Building in silence since 2025.
           </p>
 
