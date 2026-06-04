@@ -18,7 +18,7 @@ services:
       retries: 5
       start_period: 30s
     networks:
-      - appnet
+      - uasnet
 
   container-statis:
     image: faqih703/uas_statis:latest
@@ -26,7 +26,7 @@ services:
       - "80:80"
     restart: always
     networks:
-      - appnet
+      - uasnet
 
   container-dinamis:
     image: faqih703/uas_dinamis:latest
