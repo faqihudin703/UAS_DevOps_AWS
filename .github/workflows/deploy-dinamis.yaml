@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.AWS_USERNAME }}
           key: ${{ secrets.AWS_PRIVATE_KEY }}
           script: |
-            cd ~/docker-aws
+            cd /home/ubuntu/docker-aws
             docker compose pull container-dinamis
             docker compose up -d --no-deps container-dinamis
             echo "[dinamis] deployed at $(date)"

@@ -1,4 +1,4 @@
-# Stage 1: build web
+# Stage 1: build
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package.json package-lock.json* ./

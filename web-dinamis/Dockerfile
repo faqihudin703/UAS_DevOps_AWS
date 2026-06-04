@@ -1,6 +1,6 @@
 FROM node:20-alpine AS base
 
-# Stage 1: install dependency
+# Stage 1: install deps
 FROM base AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
