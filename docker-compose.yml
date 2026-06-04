@@ -9,7 +9,7 @@ services:
       MARIADB_PASSWORD: usrcompro_2388010020
     volumes:
       - db_data:/var/lib/mysql
-      - ./web-dinamis/db_data/dbcompro_2388010020.sql:/docker-entrypoint-initdb.d/dbcompro_2388010020.sql:ro
+      - /home/ubuntu/docker-aws/db_data/dbcompro_2388010020.sql:/docker-entrypoint-initdb.d/dbcompro_2388010020.sql:ro
     restart: always
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
