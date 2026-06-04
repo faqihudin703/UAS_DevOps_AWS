@@ -44,11 +44,11 @@ services:
       db-webdinamis:
         condition: service_healthy
     networks:
-      - appnet
+      - uasnet
 
 volumes:
   db_data: {}
 
 networks:
-  appnet:
+  uasnet:
     driver: bridge
