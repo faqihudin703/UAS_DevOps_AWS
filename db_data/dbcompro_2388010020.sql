@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS articles (
 -- ─────────────────────────────────────────
 
 INSERT INTO users (name, email, password, role) VALUES
-  ('Admin Redaksi', 'admin@redaksi.id', '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQyCgKCFw.9e8KCsZj.WaJJoa', 'admin'),
-  ('Faqih Editor',  'faqih@redaksi.id', '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQyCgKCFw.9e8KCsZj.WaJJoa', 'editor');
+  ('Admin Redaksi', 'admin@redaksi.id', '$2b$12$GfDpUl.xCl9oL8J5EzgoBOQzyIKUjfeKBz./VLnyb61Ua.A6MRFxC', 'admin'),
+  ('Faqih Editor',  'faqih@redaksi.id', '$2b$12$GfDpUl.xCl9oL8J5EzgoBOQzyIKUjfeKBz./VLnyb61Ua.A6MRFxC', 'editor');
 
 -- ─────────────────────────────────────────
 -- SEED ARTICLES
