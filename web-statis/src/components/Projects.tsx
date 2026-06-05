@@ -4,7 +4,7 @@ const projects = [
   {
     num: '01',
     name: 'Santara Weather Oracle',
-    desc: 'Production Solana oracle ingesting BMKG weather data. 6 nodes, 52 feeds, ~6K rounds, 25K+ transactions. Masterchef reward accumulator pattern, NodePoolInfo reward_per_submit, Node reward_debt. 99.997% uptime.',
+    desc: 'Live weather data from BMKG stations across Indonesia, pushed on-chain to Solana. Running 6 nodes across 52 feeds with over 25,000 transactions processed. 99.997% uptime since launch.',
     tags: ['Solana', 'Anchor', 'DePIN', 'SQLite'],
     link: 'https://oracle.santaras.my.id',
     linkLabel: 'oracle.santaras.my.id',
@@ -88,20 +88,22 @@ export default function Projects() {
           {projects.map(p => (
             <div
               key={p.num}
-              className="bg-paper p-8 flex flex-col gap-3.5 group hover:bg-ink hover:text-paper transition-colors duration-200"
+              className="bg-paper p-8 flex flex-col gap-3.5 group hover:bg-paper2 transition-colors duration-200"
             >
-              <span className="font-mono font-bold text-[1.9rem] leading-none text-black/[0.07] group-hover:text-white/[0.07] transition-colors">
+              <span className="font-mono font-bold text-[1.9rem] leading-none text-black/[0.07] transition-colors">
                 {p.num}
               </span>
-              <h3 className="text-[0.97rem] font-semibold tracking-tight">{p.name}</h3>
-              <p className="text-[0.82rem] leading-[1.68] text-muted group-hover:text-white/55 flex-1 transition-colors">
+              <h3 className="text-[0.97rem] font-semibold tracking-tight group-hover:text-accent transition-colors">
+                {p.name}
+              </h3>
+              <p className="text-[0.82rem] leading-[1.68] text-muted flex-1">
                 {p.desc}
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {p.tags.map(t => (
                   <span
                     key={t}
-                    className="font-mono text-[0.54rem] tracking-[0.12em] uppercase px-2 py-1 border border-black/10 text-muted group-hover:border-white/15 group-hover:text-white/45 transition-colors"
+                    className="font-mono text-[0.54rem] tracking-[0.12em] uppercase px-2 py-1 border border-black/10 text-muted"
                   >
                     {t}
                   </span>
@@ -112,7 +114,7 @@ export default function Projects() {
                   href={p.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-mono text-[0.57rem] tracking-[0.15em] uppercase text-muted group-hover:text-accent flex items-center gap-1 transition-colors self-start"
+                  className="font-mono text-[0.57rem] tracking-[0.15em] uppercase text-muted hover:text-accent flex items-center gap-1 transition-colors self-start"
                 >
                   {p.linkLabel} <ArrowUpRight size={11} />
                 </a>

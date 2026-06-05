@@ -46,5 +46,7 @@ jobs:
           script: |
             cd /home/ubuntu/docker-aws
             docker compose pull container-statis
+            docker compose stop container-statis
+            docker compose rm -f container-statis
             docker compose up -d container-statis
             echo "[static] deployed at $(date)"

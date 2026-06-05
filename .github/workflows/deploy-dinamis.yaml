@@ -48,5 +48,8 @@ jobs:
             chmod 644 /home/ubuntu/docker-aws/db_data/dbcompro_2388010020.sql
             cd /home/ubuntu/docker-aws
             docker compose pull container-dinamis
-            docker compose up -d container-dinamis
+            docker compose stop container-dinamis db-webdinamis
+            docker compose rm -f container-dinamis db-webdinamis
+            docker volume rm docker-aws_db_data || true
+            docker compose up -d db-webdinamis container-dinamis
             echo "[dinamis] deployed at $(date)"

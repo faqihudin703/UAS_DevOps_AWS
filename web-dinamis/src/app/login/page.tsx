@@ -1,6 +1,7 @@
 import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
 import LoginForm from '@/components/LoginForm'
+import Link from 'next/link'
 
 export default async function LoginPage() {
   const session = await auth()
@@ -34,10 +35,27 @@ export default async function LoginPage() {
             textTransform: 'uppercase',
             color: 'rgba(245,242,236,0.28)',
           }}>
-            Sistem Manajemen Artikel
+            Admin Panel
           </p>
         </div>
+
         <LoginForm />
+
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <Link
+            href="/"
+            style={{
+              fontFamily: 'var(--mono)',
+              fontSize: '0.57rem',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              color: 'rgba(245,242,236,0.25)',
+              textDecoration: 'none',
+            }}
+          >
+            ← Kembali ke beranda
+          </Link>
+        </div>
       </div>
     </main>
   )

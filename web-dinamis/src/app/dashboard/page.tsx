@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { auth, signOut } from '@/lib/auth'
 import { redirect } from 'next/navigation'
 import pool from '@/lib/db'
@@ -67,9 +69,9 @@ export default async function DashboardPage() {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         height: '58px',
       }}>
-        <span style={{ fontFamily: 'var(--mono)', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--paper)' }}>
+        <a href="/" style={{ fontFamily: 'var(--mono)', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--paper)', textDecoration: 'none' }}>
           RED<span style={{ color: 'var(--accent)' }}>AK</span>SI
-        </span>
+        </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <span style={{ fontFamily: 'var(--mono)', fontSize: '0.6rem', letterSpacing: '0.08em', color: 'rgba(245,242,236,0.4)' }}>
             {session.user?.name}

@@ -4,7 +4,6 @@
 
 :root {
   --ink:    #0c0c0c;
-  --ink2:   #1c1c1c;
   --paper:  #f5f2ec;
   --paper2: #edeae2;
   --accent: #1a6b3a;
@@ -14,7 +13,7 @@
   --sans:   'Space Grotesk', sans-serif;
 }
 
-html { font-size: 16px; }
+html { font-size: 16px; scroll-behavior: smooth; }
 body { background: var(--paper); color: var(--ink); font-family: var(--sans); }
 
 ::-webkit-scrollbar { width: 3px; }
