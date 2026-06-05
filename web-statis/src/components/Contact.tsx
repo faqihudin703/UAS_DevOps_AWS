@@ -3,7 +3,7 @@ import { Github, Twitter, Globe, Mail, MapPin } from 'lucide-react'
 const contacts = [
   { label: 'Email',    value: 'faqihudin703@gmail.com',  link: 'mailto:faqihudin703@gmail.com', icon: <Mail size={13} /> },
   { label: 'X',        value: '@Frosky703',              link: 'https://x.com/Frosky703',       icon: <Twitter size={13} /> },
-  { label: 'GitHub',   value: 'github.com/Frosky703',   link: 'https://github.com/Frosky703',  icon: <Github size={13} /> },
+  { label: 'GitHub',   value: 'github.com/faqihudin703',   link: 'https://github.com/faqihudin703',  icon: <Github size={13} /> },
   { label: 'Location', value: 'Cirebon, West Java, ID', link: null,                            icon: <MapPin size={13} /> },
 ]
 
