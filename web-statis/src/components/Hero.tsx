@@ -80,7 +80,7 @@ export default function Hero() {
           {[
             { label: 'Focus',     value: 'Solana · EVM · DeFi · DePIN',    icon: null,                                         link: null },
             { label: 'Community', value: 'Superteam Indonesia · Solinkify', icon: null,                                         link: null },
-            { label: 'Products',  value: '7 live — santaras.my.id',        icon: <Zap size={12} className="text-accent" />,    link: 'https://santaras.my.id' },
+            { label: 'Products',  value: '7 products live on testnet/devnet',        icon: <Zap size={12} className="text-accent" />,    href: '#projects' },
             { label: 'GitHub',    value: 'github.com/faqihudin703',            icon: null,                                         link: 'https://github.com/faqihudin703' },
             { label: 'X',         value: '@Frosky703',                      icon: null,                                         link: 'https://x.com/Frosky703' },
             { label: 'Location',  value: 'Cirebon, Indonesia',              icon: <MapPin size={12} className="text-muted" />, link: null },
