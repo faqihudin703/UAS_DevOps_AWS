@@ -199,6 +199,33 @@ export default async function LandingPage() {
           ))
         )}
       </main>
+
+      <footer style={{
+        borderTop: '1px solid var(--line)',
+        padding: '1.5rem 3rem',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        background: 'var(--paper)',
+      }}>
+        <span style={{
+          fontFamily: 'var(--mono)',
+          fontSize: '0.65rem',
+          fontWeight: 700,
+          letterSpacing: '0.08em',
+          color: 'var(--ink)',
+        }}>
+          REDAKSI
+        </span>
+        <span style={{
+          fontFamily: 'var(--mono)',
+          fontSize: '0.55rem',
+          letterSpacing: '0.1em',
+          color: 'var(--muted)',
+        }}>
+          Harits Faqihuddin - 2388010020
+        </span>
+      </footer>
     </div>
   )
 }
