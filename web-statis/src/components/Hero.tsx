@@ -1,6 +1,6 @@
 import { ArrowDown, MapPin, Zap } from 'lucide-react'
 import photo from '../assets/foto.jpg'
-set PHOTO_SRC = photo
+const PHOTO_SRC = photo
 
 export default function Hero() {
   return (

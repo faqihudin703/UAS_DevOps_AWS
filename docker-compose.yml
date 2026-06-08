@@ -3,7 +3,7 @@ services:
   db-webdinamis:
     image: mariadb:lts
     environment:
-      MARIADB_ROOT_PASSWORD: Admin@8419
+      MARIADB_ROOT_PASSWORD: Admin@84197
       MARIADB_DATABASE: dbcompro_2388010020
       MARIADB_USER: userwebdinamis_2388010020
       MARIADB_PASSWORD: usrcompro_2388010020
@@ -40,7 +40,7 @@ services:
       DB_HOST: db-webdinamis
       AUTH_TRUST_HOST: "true"
       NEXTAUTH_SECRET: adm-serv-web-bebas-saja-32-karakter
-      NEXTAUTH_URL: http://13.239.35.21:3000
+      NEXTAUTH_URL: http://54.254.58.193:3000
     depends_on:
       db-webdinamis:
         condition: service_healthy
