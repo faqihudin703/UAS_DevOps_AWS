@@ -1,20 +1,17 @@
 'use client'
 
-import { useRef } from 'react'
+import { useState } from 'react'
 
 interface Props {
   action: (formData: FormData) => Promise<void>
 }
 
 export default function ArticleForm({ action }: Props) {
-  const ref = useRef<HTMLFormElement>(null)
+  const [published, setPublished] = useState(true)
 
   return (
-    <form
-      ref={ref}
-      action={action}
-      style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
-    >
+    <form action={action} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+
       <div style={field}>
         <label style={lbl}>Judul</label>
         <input
@@ -63,12 +60,38 @@ export default function ArticleForm({ action }: Props) {
         <textarea
           name="body"
           required
-          rows={6}
+          rows={7}
           placeholder="Konten lengkap artikel..."
           style={{ ...inp, resize: 'vertical', lineHeight: 1.65 }}
           onFocus={e => (e.target.style.borderColor = 'var(--accent)')}
           onBlur={e  => (e.target.style.borderColor = 'rgba(12,12,12,0.15)')}
         />
+      </div>
+
+      {/* Published toggle */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.6rem 0.9rem', background: 'var(--paper2)', border: '1px solid var(--line)' }}>
+        <span style={{ fontFamily: 'var(--mono)', fontSize: '0.57rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--muted)' }}>
+          Status
+        </span>
+        <button
+          type="button"
+          onClick={() => setPublished(p => !p)}
+          style={{
+            fontFamily: 'var(--mono)',
+            fontSize: '0.57rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            padding: '0.3rem 0.8rem',
+            background: 'transparent',
+            border: `1px solid ${published ? 'rgba(26,107,58,0.4)' : 'rgba(248,113,113,0.3)'}`,
+            color: published ? 'var(--accent)' : 'rgba(248,113,113,0.7)',
+            cursor: 'pointer',
+            transition: 'all 0.15s',
+          }}
+        >
+          {published ? 'Published' : 'Draft'}
+        </button>
+        <input type="hidden" name="published" value={published ? '1' : '0'} />
       </div>
 
       <button
@@ -88,7 +111,7 @@ export default function ArticleForm({ action }: Props) {
         onMouseEnter={e => ((e.target as HTMLButtonElement).style.background = 'var(--accent)')}
         onMouseLeave={e => ((e.target as HTMLButtonElement).style.background = 'var(--ink)')}
       >
-        Publikasikan
+        Simpan Artikel
       </button>
     </form>
   )

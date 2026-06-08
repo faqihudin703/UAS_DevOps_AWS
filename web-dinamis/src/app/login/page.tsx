@@ -25,7 +25,7 @@ export default async function LoginPage() {
             letterSpacing: '0.06em',
             color: 'var(--paper)',
           }}>
-            RED<span style={{ color: 'var(--accent)' }}>AK</span>SI
+            REDAKSI
           </p>
           <p style={{
             marginTop: '0.5rem',

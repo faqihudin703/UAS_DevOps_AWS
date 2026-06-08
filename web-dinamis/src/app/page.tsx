@@ -50,7 +50,7 @@ export default async function LandingPage() {
           letterSpacing: '0.1em',
           color: 'var(--ink)',
         }}>
-          RED<span style={{ color: 'var(--accent)' }}>AK</span>SI
+          REDAKSI
         </span>
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           <span style={{

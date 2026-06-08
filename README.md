@@ -190,6 +190,7 @@ Landing page REDAKSI dapat diakses di `http://<IP_EC2>:3000` dan menampilkan daf
 Login ke `http://<IP_EC2>:3000/login` menggunakan akun admin, kemudian menambahkan artikel baru dari dashboard.
 
 ![Admin panel](image/image-10.png)
+![Admin tambah artikel](image/image-11.png)
 
 ---
 
@@ -197,7 +198,7 @@ Login ke `http://<IP_EC2>:3000/login` menggunakan akun admin, kemudian menambahk
 
 Kembali ke halaman utama untuk memastikan artikel yang baru saja ditambahkan sudah tampil tanpa perlu refresh paksa atau intervensi server.
 
-![Artikel baru muncul](image/image-11.png)
+![Artikel baru muncul](image/image-12.png)
 
 ---
 
@@ -213,7 +214,7 @@ git push origin main
 
 GitHub Actions mendeteksi perubahan hanya pada `web-statis/**` dan menjalankan pipeline statis saja.
 
-![Push memicu pipeline](image/image-12.png)
+![Push memicu pipeline](image/image-13.png)
 
 ---
 
@@ -221,7 +222,7 @@ GitHub Actions mendeteksi perubahan hanya pada `web-statis/**` dan menjalankan p
 
 Setelah pipeline selesai berjalan, perubahan sudah langsung terlihat di browser. Tidak ada SSH manual, tidak ada `docker pull` manual — semuanya otomatis.
 
-![Perubahan tampil di production](image/image-13.png)
+![Perubahan tampil di production](image/image-14.png)
 
 ---
 
