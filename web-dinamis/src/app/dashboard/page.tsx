@@ -55,10 +55,19 @@ async function addArticle(formData: FormData) {
   const category  = (formData.get('category') as string).trim() || 'Umum'
   const published = formData.get('published') === '1' ? 1 : 0
   if (!title || !excerpt || !body) return
+
+  // Lookup author_id by name — tidak bergantung session.user.id
+  const [userRows] = await pool.query<RowDataPacket[]>(
+    'SELECT id FROM users WHERE name = ? LIMIT 1',
+    [session.user?.name]
+  )
+  const authorId = userRows[0]?.id
+  if (!authorId) return
+
   const slug = title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').slice(0, 240) + '-' + Date.now()
   await pool.query(
     'INSERT INTO articles (title, slug, excerpt, body, category, author_id, published) VALUES (?,?,?,?,?,?,?)',
-    [title, slug, excerpt, body, category, (session.user as any).id, published]
+    [title, slug, excerpt, body, category, authorId, published]
   )
   redirect('/dashboard')
 }
